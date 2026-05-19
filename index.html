@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprovante Pix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .comprovante {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Topo - Logo e Status */
+        .logo-inter {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 30px;
+        }
+
+        /* Ícone simplificado em CSS representando o sol da logo do Inter */
+        .logo-sun {
+            display: flex;
+            gap: 2px;
+            align-items: flex-end;
+            margin-right: 2px;
+        }
+        .logo-sun span {
+            background-color: #ea5b0c;
+            width: 3px;
+            border-radius: 2px;
+        }
+        .logo-sun span:nth-child(1) { height: 8px; transform: rotate(-30deg); }
+        .logo-sun span:nth-child(2) { height: 14px; transform: rotate(-15deg); }
+        .logo-sun span:nth-child(3) { height: 18px; }
+        .logo-sun span:nth-child(4) { height: 14px; transform: rotate(15deg); }
+        .logo-sun span:nth-child(5) { height: 8px; transform: rotate(30deg); }
+
+        .logo-text {
+            color: #ea5b0c;
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+        }
+
+        .success-circle {
+            background-color: #00b15e;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .success-checkmark {
+            width: 14px;
+            height: 24px;
+            border: solid white;
+            border-width: 0 4px 4px 0;
+            transform: rotate(45deg);
+            margin-bottom: 4px;
+        }
+
+        .titulo-valor {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-valor h1 {
+            color: #000000;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .titulo-valor .valor {
+            color: #000000;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        /* Seções de Informação */
+        .secao {
+            width: 100%;
+        }
+
+        .secao-titulo {
+            color: #000000;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .linha-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .linha-info.bloco {
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .label {
+            color: #737373;
+            font-weight: 400;
+            min-width: 120px;
+        }
+
+        .dado {
+            color: #000000;
+            font-weight: 700;
+            text-align: right;
+            word-break: break-all;
+        }
+
+        .linha-info.bloco .dado {
+            text-align: left;
+        }
+
+        .divisor {
+            width: 100%;
+            border: none;
+            border-top: 1px dashed #cccccc;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="comprovante">
+        <div class="logo-inter">
+            <div class="logo-sun">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="logo-text">inter</div>
+        </div>
+
+        <div class="success-circle">
+            <div class="success-checkmark"></div>
+        </div>
+
+        <div class="titulo-valor">
+            <h1>Pix enviado</h1>
+            <div class="valor">R$ 12,96</div>
+        </div>
+
+        <div class="secao">
+            <h2 class="secao-titulo">Sobre a transação</h2>
+            
+            <div class="linha-info">
+                <span class="label">Data do pagamento</span>
+                <span class="dado">Domingo, 05/04/2026</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">Horário</span>
+                <span class="dado">00h39</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">Identificador</span>
+                <span class="dado">000002MODEVV93NB22ZJSX92G3</span>
+            </div>
+            
+            <div class="linha-info bloco">
+                <span class="label">ID da transação</span>
+                <span class="dado">E00416968202604050339q4oKfMwZBLH</span>
+            </div>
+        </div>
+
+        <hr class="divisor">
+
+        <div class="secao">
+            <h2 class="secao-titulo">Quem recebeu</h2>
+            
+            <div class="linha-info">
+                <span class="label">Nome</span>
+                <span class="dado">99 Tecnologia LTDA</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">CPF/CNPJ</span>
+                <span class="dado">18.033.552/0001-61</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">Instituição</span>
+                <span class="dado">Adyen do Brasil Ip LTDA.</span>
+            </div>
+        </div>
+
+        <hr class="divisor">
+
+        <div class="secao">
+            <h2 class="secao-titulo">Quem pagou</h2>
+            
+            <div class="linha-info">
+                <span class="label">Nome</span>
+                <span class="dado">EDSON DA SILVA ANTUNES NETO</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">CPF/CNPJ</span>
+                <span class="dado">***.519.162-**</span>
+            </div>
+            
+            <div class="linha-info">
+                <span class="label">Instituição</span>
+                <span class="dado">Banco Inter S.A.</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
